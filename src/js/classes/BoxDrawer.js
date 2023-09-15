@@ -90,7 +90,7 @@ class BoxDrawer {
       this.playerBox.scale.height,
       "rgba(0, 255, 0, 0.5)",
       "Player"
-    );
+    ); //sfas
     this.ctx.globalAlpha = 0.7; // Change the opacity value (0.0 to 1.0)
     // Resize the playerImage to fit the player box
     this.playerImage.resizeToWidth(this.playerBox.scale.width);
