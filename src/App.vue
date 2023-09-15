@@ -1,3 +1,8 @@
 <script setup></script>
 
-<template></template>
+<template><div class=" font-red">
+    
+    helloasdadasd
+</div>
+
+</template>
