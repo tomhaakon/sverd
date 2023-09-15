@@ -2,7 +2,7 @@
   <!-- transparent layer -->
   <div class="absolute inset-0 flex justify-end items-end p-4">
     <!-- container for buttons -->
-    <div class="flex flex-col items-end space-y-4 mb-10">
+    <div class="flex flex-col items-end space-y-4 mb-4 mr-2">
       <!-- C button -->
       <button
         class="rounded-full bg-blue-500 opacity-70"
@@ -15,17 +15,6 @@
         C
       </button>
       <div class="flex space-x-4">
-        <!-- A button -->
-        <button
-          class="bg-blue-500 opacity-70"
-          :class="[
-            actionButton.size.height,
-            actionButton.size.width,
-            actionButton.rounded.true,
-          ]"
-        >
-          A
-        </button>
         <!-- B button -->
         <button
           class="w-24 h-16 rounded-full bg-blue-500 opacity-70"
@@ -36,6 +25,17 @@
           ]"
         >
           B
+        </button>
+        <!-- A button -->
+        <button
+          class="bg-blue-500 opacity-70"
+          :class="[
+            actionButton.size.height,
+            actionButton.size.width,
+            actionButton.rounded.true,
+          ]"
+        >
+          A
         </button>
       </div>
     </div>
