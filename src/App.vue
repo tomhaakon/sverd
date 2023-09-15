@@ -1,8 +1,7 @@
-<script setup></script>
 
-<template><div class=" font-red">
-    
-    helloasdadasd
-</div>
-
+<template>
+  <canvas id="gameCanvas" class="w-screen h-screen bg-black"></canvas>
 </template>
+<script src="./game.js"></script>
+<script>
+</script>
