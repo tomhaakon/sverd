@@ -5,7 +5,10 @@ export default function useGame() {
     console.warn("loaded game.js");
 
     const canvas = document.getElementById("gameCanvas");
+    if (!canvas) return; // Exit if canvas not found
+
     const ctx = canvas.getContext("2d");
+    if (!ctx) return; // Exit if 2D context not supported
 
     // canvas
     canvas.width = window.innerWidth;
@@ -56,9 +59,25 @@ export default function useGame() {
         oponentBox.scale.height
       );
 
+      // Draw text in the oponent box
+      ctx.font = "24px Arial";
+      ctx.fillStyle = "black";
+      let text = "Oponent";
+      let textMetrics = ctx.measureText(text);
+      let textX = oponentX + (oponentBox.scale.width - textMetrics.width) / 2;
+      let textY = oponentY + oponentBox.scale.height / 2 + 12;
+      ctx.fillText(text, textX, textY);
+
       // Draw player box
-      ctx.fillStyle = "rgba(0, 255, 0, 0.3)";
+      ctx.fillStyle = "rgba(0, 255, 0, 0.5)";
       ctx.fillRect(10, playerY, playerBox.scale.width, playerBox.scale.height);
+
+      // Draw text in the player box
+      text = "Player";
+      textMetrics = ctx.measureText(text);
+      textX = 10 + (playerBox.scale.width - textMetrics.width) / 2;
+      textY = playerY + playerBox.scale.height / 2 + 12;
+      ctx.fillText(text, textX, textY);
     };
 
     drawBoxes();
